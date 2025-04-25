@@ -3,10 +3,12 @@
 void main() {
     chessPos initialPos;
     pathTree tr;
-    char buffer[50];
+    char     buffer[50];
+    
     scanf("%s", buffer);
     int size = strlen(buffer);
-    if (size != 2)                // incase the input longer then expected
+    
+    if (size != 2)                            // incase the input longer then expected
     {
         printf("Invalid input");
         exit(1);
@@ -31,10 +33,8 @@ void main() {
             printTable(*lst);
     }
 
-
     freeTree(&tr);
 }
-
 /*
 
                                          @@@@@}
@@ -84,5 +84,4 @@ void main() {
                    @@@@                                                      @@
                    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 */
