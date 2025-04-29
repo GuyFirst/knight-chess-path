@@ -20,7 +20,7 @@ void processMoves(chessPos knightPos, chessPos** knightMovesArr, int* curr, int*
             (*knightMovesArr)[*curr][1] = optionalMove[1];
             (*curr)++;
 
-            if (*curr >= *phSize) // If current size exceeds or equals the allocated size, reallocate
+            if (*curr >= *phSize) 
             {
                 *phSize += 8; // Allocate memory for 8 more moves
                 *knightMovesArr = (chessPos*)realloc(*knightMovesArr, (*phSize) * sizeof(chessPos));
@@ -36,8 +36,8 @@ void processMoves(chessPos knightPos, chessPos** knightMovesArr, int* curr, int*
     }
 }
 
-chessPos* arrForKnightPos(chessPos knightPos, int* logSize)    //this func recieves a chessPos and a pointer to size,
-{                                                              //then it builds an array of next possible positions for curr chessPos
+chessPos* arrForKnightPos(chessPos knightPos, int* logSize)    
+{
     chessPos* knightMovesArr = (chessPos*)malloc(8 * sizeof(chessPos));
     if (!knightMovesArr)
     {
