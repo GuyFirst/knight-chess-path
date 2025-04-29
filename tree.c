@@ -41,8 +41,9 @@ void findKnightPathCoveringAllBoardRec(chessPosList* lst, treeNode* root, int* c
 void removeNodeFromEndList(chessPosList* lst)    //this func recieves a list and removes node from the end of the list
 {
     if (lst->head == NULL)
+    {
         return;
-
+    }
     if (lst->head == lst->tail)
     {
         free(lst->head);
@@ -52,7 +53,9 @@ void removeNodeFromEndList(chessPosList* lst)    //this func recieves a list and
 
     chessPosCell* current = lst->head;
     while (current->next != lst->tail)
+   {
         current = current->next;
+   }
 
     free(lst->tail);
     current->next = NULL;
