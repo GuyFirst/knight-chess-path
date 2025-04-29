@@ -8,7 +8,7 @@ void main() {
     scanf("%s", buffer);
     int size = strlen(buffer);
     
-    if (size != 2)                            // incase the input longer then expected
+    if (size != 2)                           
     {
         printf("Invalid input");
         exit(1);
@@ -17,7 +17,7 @@ void main() {
     initialPos[0] = buffer[0];
     initialPos[1] = buffer[1];
 
-    if (isValidMove(initialPos) == false)    //incase the position given isn't valid
+    if (isValidMove(initialPos) == false)   
     {
         printf("Invalid input");
         exit(1);
@@ -35,6 +35,8 @@ void main() {
 
     freeTree(&tr);
 }
+
+
 /*
 
                                          @@@@@}
